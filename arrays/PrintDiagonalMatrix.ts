@@ -1,13 +1,16 @@
 export const findDiagonalOrder = function (mat: []) {
   for (let k = 0; k < mat.length; k++) {
+    let temp = "";
     let i = k;
     let j = 0;
+    let result = "";
     while (i >= 0) {
-      console.log(mat[i][j]);
-      let temp = mat[i][j];
+      result = temp + " " + String(mat[i][j]);
+      temp = mat[i][j];
       i = i - 1;
       j = j + 1;
     }
+    console.log(result);
     console.log("\n");
   }
   for (let k = 1; k <= mat.length - 1; k++) {
